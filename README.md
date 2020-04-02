@@ -1,3 +1,3 @@
 #DEMO
 
-https://coffee-vue.herokuapp.com/video
+https://coffee-vue.herokuapp.com
