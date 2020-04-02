@@ -42,66 +42,23 @@
         </p>
       </aside>
     </article>
+    <h2 class="our-best__heading">Our best</h2>
     <article class="wrapper__our-best">
-      <h2 class="our-best__heading">Our best</h2>
-      <div class="wrapper__our-best__list">
+      <div class="wrapper__our-best__list"
+      v-for="item in this.getData[0].bestsellers" :key="item.name">
         <aside
           class="best__item"
-          @click="
-            saveData(
-              `${getData[0].bestsellers[0].name}`,
-              `${getData[0].bestsellers[0].url}`,
-              `${getData[0].bestsellers[0].price}`,
-              `${getData[0].bestsellers[0].country}`,
-              `${getData[0].bestsellers[0].description}`
-            )
-          "
-        >
+          @click="saveData(
+              `${item.name}`,
+              `${item.url}`,
+              `${item.price}`,
+              `${item.country}`,
+              `${item.description}`)">
           <router-link to="about">
             <Card
-              :img="getData[0].bestsellers[0].url"
-              :name="getData[0].bestsellers[0].name"
-              :price="getData[0].bestsellers[0].price"
-            />
-          </router-link>
-        </aside>
-        <aside
-          class="best__item"
-          @click="
-            saveData(
-              `${getData[0].bestsellers[1].name}`,
-              `${getData[0].bestsellers[1].url}`,
-              `${getData[0].bestsellers[1].price}`,
-              `${getData[0].bestsellers[1].country}`,
-              `${getData[0].bestsellers[1].description}`
-            )
-          "
-        >
-          <router-link to="about">
-            <Card
-              :img="getData[0].bestsellers[1].url"
-              :name="getData[0].bestsellers[1].name"
-              :price="getData[0].bestsellers[1].price"
-            />
-          </router-link>
-        </aside>
-        <aside
-          class="best__item"
-          @click="
-            saveData(
-              `${getData[0].bestsellers[2].name}`,
-              `${getData[0].bestsellers[2].url}`,
-              `${getData[0].bestsellers[2].price}`,
-              `${getData[0].bestsellers[2].country}`,
-              `${getData[0].bestsellers[2].description}`
-            )
-          "
-        >
-          <router-link to="about">
-            <Card
-              :img="getData[0].bestsellers[2].url"
-              :name="getData[0].bestsellers[2].name"
-              :price="getData[0].bestsellers[2].price"
+              :img="item.url"
+              :name="item.name"
+              :price="item.price"
             />
           </router-link>
         </aside>
@@ -142,19 +99,6 @@ export default {
 </script>
 
 <style scoped>
-.video__gallery {
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    text-align: center;
-  /* align-items: center; */
-}
-.video__gallery__card {
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
-    margin: 20px;
-}
-
 .header__wrapper {
   max-width: 1920px;
   width: 100%;
@@ -265,6 +209,9 @@ export default {
   width: 100%;
   padding: 50px 10px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .wrapper__our-best__list {
@@ -277,6 +224,7 @@ export default {
 }
 
 .our-best__heading {
+  /* align-self: center; */
   display: block;
   text-align: center;
 }

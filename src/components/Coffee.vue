@@ -38,115 +38,66 @@
             <div class="search-block">
                 <label for="search__input">
                     Looking for
-                    <input type="text" class="search__input" id="search__input" placeholder="start typing here...">
+                    <input type="text" 
+                    class="search__input" 
+                    id="search__input" 
+                    placeholder="start typing here..." 
+                    v-model="input"
+                    v-on:input="search()">
                 </label>
             </div>
             <div class="filter-block">
                 <span>Or filter</span>
-                <label for="button__brazil" class="btn__filter">
-                    <input type="button" id="button__brazil" class="btn__hidden">
+                <label for="button__brazil" class="btn__filter" >
+                    <input type="button" id="button__brazil" class="btn__hidden" @click="filter('brazil')">
                 </label>
-                <label for="button__kenya" class="btn__filter">
-                    <input type="button" id="button__kenya" class="btn__hidden">
+                <label for="button__kenya" class="btn__filter"  >
+                    <input type="button" id="button__kenya" class="btn__hidden" @click="filter('kenya')">
                 </label>
-                <label for="button__columbia" class="btn__filter">
-                    <input type="button" id="button__columbia" class="btn__hidden">
+                <label for="button__columbia" class="btn__filter"  >
+                    <input type="button" id="button__columbia" class="btn__hidden" @click="filter('columbia')">
                 </label>
+                <!-- {{input}} -->
                 <!-- <button>Kenya</button>
                 <button>Columbia</button> -->
             </div>
             
         </main>
-        <section class="filtered__section" v-if="this.filtered.length == 0">
-            <aside class="filtered__item"
-            @click="saveData(`${getData[0].coffee[0].name}`, 
-                             `${getData[0].coffee[0].url}`,
-                             `${getData[0].coffee[0].price}`,
-                             `${getData[0].coffee[0].country}`,
-                             `${getData[0].coffee[0].description}`)">
+        <section class="filtered__section" v-if="this.filtered.length == 0 && this.input == ''">
+            <aside class="filtered__item" v-for="item in this.getData[0].coffee" :key="item.name"
+            @click="saveData(`${item.name}`, 
+                            `${item.url}`,
+                            `${item.price}`,
+                            `${item.country}`,
+                            `${item.description}`)">
                 <router-link to="about">
-                <Card :img="getData[0].coffee[0].url"
-                :name="getData[0].coffee[0].name"
-                :price="getData[0].coffee[0].price"
-                :country="getData[0].coffee[0].country"
-                :description="getData[0].coffee[0].description"
-                />
-            </router-link>
-            </aside>
-            <aside class="filtered__item"
-            @click="saveData(`${getData[0].coffee[1].name}`, 
-                             `${getData[0].coffee[1].url}`,
-                             `${getData[0].coffee[1].price}`,
-                             `${getData[0].coffee[1].country}`,
-                             `${getData[0].coffee[1].description}`)">
-                <router-link to="about">
-                <Card :img="getData[0].coffee[1].url"
-                :name="getData[0].coffee[1].name"
-                :price="getData[0].coffee[1].price"
-                :country="getData[0].coffee[1].country"
-                :description="getData[0].coffee[1].description"/>
-            </router-link>
-            </aside>
-            <aside class="filtered__item"
-            @click="saveData(`${getData[0].coffee[2].name}`, 
-                             `${getData[0].coffee[2].url}`,
-                             `${getData[0].coffee[2].price}`,
-                             `${getData[0].coffee[2].country}`,
-                             `${getData[0].coffee[2].description}`)">
-                <router-link to="about">
-                <Card :img="getData[0].coffee[2].url"
-                :name="getData[0].coffee[2].name"
-                :price="getData[0].coffee[2].price"
-                :country="getData[0].coffee[2].country"
-                :description="getData[0].coffee[2].description"/>
-            </router-link>
-            </aside>
-            <aside class="filtered__item"
-            @click="saveData(`${getData[0].coffee[3].name}`, 
-                             `${getData[0].coffee[3].url}`,
-                             `${getData[0].coffee[3].price}`,
-                             `${getData[0].coffee[3].country}`,
-                             `${getData[0].coffee[3].description}`)">
-                <router-link to="about">
-                <Card :img="getData[0].coffee[3].url"
-                :name="getData[0].coffee[3].name"
-                :price="getData[0].coffee[3].price"
-                :country="getData[0].coffee[3].country"
-                :description="getData[0].coffee[3].description"/>
-            </router-link>
-            </aside>
-            <aside class="filtered__item"
-            @click="saveData(`${getData[0].coffee[4].name}`, 
-                             `${getData[0].coffee[4].url}`,
-                             `${getData[0].coffee[4].price}`,
-                             `${getData[0].coffee[4].country}`,
-                             `${getData[0].coffee[4].description}`)">
-                <router-link to="about">
-                <Card :img="getData[0].coffee[4].url"
-                :name="getData[0].coffee[4].name"
-                :price="getData[0].coffee[4].price"
-                :country="getData[0].coffee[4].country"
-                :description="getData[0].coffee[4].description"/>
-            </router-link>
-            </aside>
-            <aside class="filtered__item"
-            @click="saveData(`${getData[0].coffee[5].name}`, 
-                             `${getData[0].coffee[5].url}`,
-                             `${getData[0].coffee[5].price}`,
-                             `${getData[0].coffee[5].country}`,
-                             `${getData[0].coffee[5].description}`)">
-                <router-link to="about">
-                <Card :img="getData[0].coffee[5].url"
-                :name="getData[0].coffee[5].name"
-                :price="getData[0].coffee[5].price"
-                :country="getData[0].coffee[5].country"
-                :description="getData[0].coffee[5].description"/>
-            </router-link>
+                <Card :img="item.url"
+                :name="item.name"
+                :price="item.price"
+                :country="item.country"
+                :description="item.description"/>
+                </router-link>
             </aside>
         </section>
-        <section class="filtered__section" v-else>
-            <h1>test</h1>
+        <section class="filtered__section" 
+        v-else-if="this.filtered.length > 0"
+        v-for="item in this.getFiltered" :key="item.name">
+            <aside class="filtered__item"
+            @click="saveData(`${item.name}`, 
+                            `${item.url}`,
+                            `${item.price}`,
+                            `${item.country}`,
+                            `${item.description}`)">
+                <router-link to="about">
+                <Card :img="item.url"
+                :name="item.name"
+                :price="item.price"
+                :country="item.country"
+                :description="item.description"/>
+                </router-link>
+            </aside>
         </section>
+        <h2 v-else>Ничего не найдено</h2>
     </div>
 
   </div>
@@ -158,21 +109,43 @@ import { mapState, mapActions} from 'vuex';
 
 export default {
     name: 'Coffee',
+    data() {
+        return {
+            input: ''
+        }
+    },
     components: {
         Card
     },
     computed: {
-        ...mapState(["data", "filtered"]),
-        ...mapActions(["asyncFiltered", "asyncSetSelected"]),
+        ...mapState(["data", "filtered", "filteredKey"]),
         getData() {
-            // console.log(this.data[0].bestsellers[0].country);
             return this.data;
+        },
+        getFiltered() {
+            return this.filtered;
         }
     },
     methods: {
+        ...mapActions(["asyncFiltered", "asyncSetSelected", "asyncSetFilteredKey"]),
         filter(key) {
-            let result = [];
+            this.input = key;
 
+            let result = [];
+            for( let i = 0; i < this.getData[0].coffee.length; i++ ) {
+                if ( this.getData[0].coffee[i].country.toLowerCase() == key.toLowerCase() ) {
+                    result.push(this.getData[0].coffee[i]);
+                }
+            }
+            this.asyncFiltered(result);
+        },
+        search(){
+            let result = [];
+            for( let i = 0; i < this.getData[0].coffee.length; i++ ) {
+                if ( this.input && this.getData[0].coffee[i].country.toLowerCase().includes(this.input.toLowerCase()) ) {
+                    result.push(this.getData[0].coffee[i]);
+                }
+            }
             this.asyncFiltered(result);
         },
         saveData(name, img, price, country, description) {
