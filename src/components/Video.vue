@@ -9,64 +9,37 @@
         </div>
         <section class="video__gallery">
         <div class="video__gallery__card">
-            <iframe
-                class="video__gallery__item"
-                src="https://www.youtube.com/embed/tFpovwmOuHk"
-                frameborder="0"
-                allow="accelerometer; 
-                        autoplay; 
-                        encrypted-media; 
-                        gyroscope; 
-                        picture-in-picture"
-                allowfullscreen
-            ></iframe>
+            <iframe src="https://www.youtube.com/embed/LkBOAvzWNfM" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
             <p>
                 <span> Lorem ipsum dolor sit amet.</span>
             </p>
         </div>
         <div class="video__gallery__card">
-            <iframe
-                class="video__gallery__item"
-                src="https://www.youtube.com/embed/B1QfIx3P7qw"
-                frameborder="0"
-                allow="accelerometer; 
-                        autoplay; 
-                        encrypted-media; 
-                        gyroscope; 
-                        picture-in-picture"
-                allowfullscreen
-            ></iframe>
+            <iframe src="https://www.youtube.com/embed/p9jY5clw3P0" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
             <p>
                 <span> Lorem ipsum dolor sit amet.</span>
             </p>
         </div>
         <div class="video__gallery__card">
-            <iframe
-                src="https://www.youtube.com/embed/ZPkXavb73to"
-                frameborder="0"
-                allow="accelerometer; 
-                        autoplay; 
-                        encrypted-media; 
-                        gyroscope; 
-                        picture-in-picture"
-                allowfullscreen
-            ></iframe>
+            <iframe src="https://www.youtube.com/embed/vFcS080VYQ0" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
             <p>
                 <span> Lorem ipsum dolor sit amet.</span>    
             </p>
         </div>
         <div class="video__gallery__card">
-            <iframe
-                class="video__gallery__item"
-                src="https://www.youtube.com/embed/B1QfIx3P7qw"
-                frameborder="0"
-                allow="accelerometer; 
-                        autoplay; 
-                        encrypted-media; 
-                        gyroscope; 
-                        picture-in-picture"
-                allowfullscreen
-            ></iframe>
+            <iframe src="https://www.youtube.com/embed/mDidOqUDcRY" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
             <p>
                 <span> Lorem ipsum dolor sit amet.</span>
             </p>
