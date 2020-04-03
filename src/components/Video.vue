@@ -11,7 +11,6 @@
         <div class="video__gallery__card">
             <iframe
                 class="video__gallery__item"
-                max-width="300"
                 src="https://www.youtube.com/embed/tFpovwmOuHk"
                 frameborder="0"
                 allow="accelerometer; 
@@ -22,13 +21,12 @@
                 allowfullscreen
             ></iframe>
             <p>
-                <span> First video test</span>
+                <span> Lorem ipsum dolor sit amet.</span>
             </p>
         </div>
         <div class="video__gallery__card">
             <iframe
                 class="video__gallery__item"
-                max-width="300"
                 src="https://www.youtube.com/embed/B1QfIx3P7qw"
                 frameborder="0"
                 allow="accelerometer; 
@@ -39,12 +37,11 @@
                 allowfullscreen
             ></iframe>
             <p>
-                <span> Second video test</span>
+                <span> Lorem ipsum dolor sit amet.</span>
             </p>
         </div>
         <div class="video__gallery__card">
             <iframe
-                max-width="300"
                 src="https://www.youtube.com/embed/ZPkXavb73to"
                 frameborder="0"
                 allow="accelerometer; 
@@ -55,7 +52,23 @@
                 allowfullscreen
             ></iframe>
             <p>
-                <span> Third video test</span>
+                <span> Lorem ipsum dolor sit amet.</span>    
+            </p>
+        </div>
+        <div class="video__gallery__card">
+            <iframe
+                class="video__gallery__item"
+                src="https://www.youtube.com/embed/B1QfIx3P7qw"
+                frameborder="0"
+                allow="accelerometer; 
+                        autoplay; 
+                        encrypted-media; 
+                        gyroscope; 
+                        picture-in-picture"
+                allowfullscreen
+            ></iframe>
+            <p>
+                <span> Lorem ipsum dolor sit amet.</span>
             </p>
         </div>
     </section>
