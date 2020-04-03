@@ -95,6 +95,7 @@ export default {
 }
 
 .swiper {
+cursor: pointer;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

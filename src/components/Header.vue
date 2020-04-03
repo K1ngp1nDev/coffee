@@ -50,6 +50,9 @@
                     <li class="footer__navigation__item">
                         <router-link to="/video" class="footer__navigation__link">Video</router-link>
                     </li>
+                    <li class="footer__navigation__item">
+                        <router-link to="/gallery" class="footer__navigation__link">Gallery</router-link>
+                    </li>
                 </ul>
             </nav>
             </footer>
