@@ -66,7 +66,7 @@
 import { mapState } from 'vuex';
 
 export default {
-    name: 'Card',
+    name: 'Video',
     methods: {
     },
     computed: {

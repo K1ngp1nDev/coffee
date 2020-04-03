@@ -7,6 +7,7 @@ import Header from '../components/Header.vue'
 import About from '../components/About.vue'
 import Card from '../components/Card.vue'
 import Video from '../components/Video.vue'
+import Gallery from '../components/Gallery.vue'
 
 Vue.use(VueRouter)
 
@@ -34,12 +35,17 @@ const routes = [
         {
           path: '/about',
           name: 'about',
-          component: About,
-        }        ,
+          component: About
+        },
         {
           path: '/video',
           name: 'video',
-          component: Video,
+          component: Video
+        },
+        {
+          path: '/gallery',
+          name: 'gallery',
+          component: Gallery
         }
       ]
     },

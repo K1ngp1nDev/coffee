@@ -2,6 +2,7 @@
   <div>
     <div class="header__wrapper">
       <main class="main__content">
+        
         <h1>
           Everything You Love About Coffee
         </h1>
@@ -71,6 +72,7 @@
 import About from "../components/About.vue";
 import Card from "../components/Card.vue";
 import { mapState, mapActions } from "vuex";
+
 
 export default {
   name: "Main",

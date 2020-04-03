@@ -23,6 +23,9 @@
                     <li class="header__navigation__item">
                         <router-link to="/video" class="header__navigation__link">Video</router-link>
                     </li>
+                    <li class="header__navigation__item">
+                        <router-link to="/gallery" class="header__navigation__link">Gallery</router-link>
+                    </li>
                 </ul>
             </nav>
             </header>
@@ -64,6 +67,7 @@ import Pleasure from '../components/Pleasure.vue'
 import Main from '../components/Main.vue'
 import Video from '../components/Video.vue'
 import About from '../components/About.vue'
+import Gallery from '../components/Gallery.vue'
 
 export default {
     name: 'Header',
@@ -72,7 +76,8 @@ export default {
         Coffee,
         Pleasure,
         Video,
-        About
+        About,
+        Gallery
     }
 }
 </script>
@@ -80,6 +85,7 @@ export default {
 <style scoped>
 .home {
     position: absolute;
+    z-index: 111;
 }
 .header__logo {
     display: block;
@@ -91,6 +97,7 @@ export default {
     flex-direction: row;
     padding-left: 60px;
     box-sizing: border-box;
+    
 }
 
 .header__navigation__list {
@@ -105,6 +112,7 @@ export default {
     line-height: 17px;
     list-style-type: none;
     margin-left: 40px;
+    /* z-index: 13; */
 }
 
 
@@ -164,13 +172,14 @@ export default {
 
 .header__navigation__list {
 	list-style: none;
-	z-index: 1;
+	/* z-index: 135; */
 }
 
 .header__navigation__link {
 	text-decoration: none;
 	color: #ffffff;
 	letter-spacing: 0.54px;
+    /* z-index: 55; */
 }
 
 #menu__toggle:not(checked) ~ .burger {
