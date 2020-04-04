@@ -1,24 +1,27 @@
 <template>
   <div>
     <div class="header__wrapper">
-      <main class="main__content">
-        
-        <h1>
-          Everything You Love About Coffee
-        </h1>
-        <p>
-          <img
+      <swiper class="swiper" :options="swiperOption">
+        <swiper-slide><main class="main__content">
+        <h1>Everything You Love About Coffee</h1>
+        <p><img
             src="../images/Beans_logo_white.jpg"
-            alt="separator"
-            class="separator"
-          />
-        </p>
+            alt="separator" class="separator"/></p>
         <h2>
-          We make every day full of energy and taste<br />
+          We make every day full of energy and taste<br>
           Want to try our beans?
         </h2>
         <router-link to="coffee" class="btn__more">More</router-link>
-      </main>
+      </main></swiper-slide>
+        <swiper-slide>Slide 2</swiper-slide>
+        <swiper-slide>Slide 3</swiper-slide>
+        <swiper-slide>Slide 4</swiper-slide>
+        <swiper-slide>Slide 5</swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+      </swiper>
+      
     </div>
     <article class="wrapper__about-us">
       <h2>About Us</h2>
@@ -73,13 +76,36 @@
 import About from "../components/About.vue";
 import Card from "../components/Card.vue";
 import { mapState, mapActions } from "vuex";
-
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+  import 'swiper/css/swiper.css'
 
 export default {
   name: "Main",
+  data() {
+      return {
+        swiperOption: {
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          }
+        }
+      }
+    },
   components: {
     About,
-    Card
+    Card,
+    Swiper,
+    SwiperSlide
   },
   methods: {
     saveData(name, img, price, country, description) {
@@ -255,7 +281,6 @@ export default {
 }
 
 .best__item:first-child {
-  /* padding: 20px; */
   margin-left: 0;
 }
 
@@ -309,7 +334,6 @@ export default {
   }
   .best__item {
     margin: 20px 0;
-    /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25) */
   }
   .btn__more:link {
     margin: 50px 0;
@@ -329,19 +353,24 @@ export default {
   .menu__btn {
     background: rgba(180, 175, 158, 0.5);
   }
+
   .header__navigation__list {
     opacity: 0.2;
     background: rgba(180, 175, 158, 0.5);
   }
+
   #menu__toggle:not(checked) ~ .burger {
     opacity: 1;
   }
+
   #menu__toggle:not(checked) ~ .header__navigation__list {
     opacity: 0;
   }
+
   #menu__toggle:checked ~ .header__navigation__list {
     opacity: 1;
   }
+
   .header__navigation__link:link,
   .header__navigation__link:visited {
     text-decoration: none;
@@ -349,12 +378,15 @@ export default {
     font-size: 18px;
     font-weight: bold;
   }
+
   .header__navigation__item {
     margin: 10px 10px 10px 40px;
   }
+
   .header__box {
     padding-left: 5px;
   }
+
   .about-us {
     max-width: 300px;
   }
@@ -365,6 +397,7 @@ export default {
     display: flex;
     flex-direction: column;
   }
+
   .footer__navigation__list {
     display: flex;
     flex-direction: column;
@@ -373,6 +406,7 @@ export default {
     padding-top: 20px;
     box-sizing: border-box;
   }
+
   .footer__navigation__item {
     margin: 0 0 10px 0;
   }

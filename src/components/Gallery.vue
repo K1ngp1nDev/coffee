@@ -40,6 +40,7 @@ export default {
         loop: true,
         loopedSlides: 10, // looped slides should be the same
         spaceBetween: 10,
+        effect: 'fade',
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"

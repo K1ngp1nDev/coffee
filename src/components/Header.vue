@@ -3,7 +3,7 @@
         <div class="home">
             <header class="header__box">
             <span class="header__logo">
-                <a href="#"><img src="../images/Union.png" alt="home logo"></a>
+                <router-link to="/"><img src="../images/Union.png" alt="home logo"></router-link>
             </span>
             <nav class="header__navigation">
                 <input id="menu__toggle" type="checkbox" />
@@ -34,7 +34,7 @@
         <div>
             <footer class="footer__box">
             <span class="footer__logo">
-                <a href="#"><img src="../images/coffee-beans.png" alt="home logo"></a>
+                <router-link to="/"><img src="../images/coffee-beans.png" alt="home logo"></router-link>
             </span>
             <nav class="footer__navigation">
                 <ul class="footer__navigation__list">
