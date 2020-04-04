@@ -46,7 +46,8 @@
     <h2 class="our-best__heading">Our best</h2>
     <article class="wrapper__our-best">
       <div class="wrapper__our-best__list"
-      v-for="item in this.getData[0].bestsellers" :key="item.name">
+      v-for="item in this.getData[0].bestsellers" 
+      :key="item.name">
         <aside
           class="best__item"
           @click="saveData(

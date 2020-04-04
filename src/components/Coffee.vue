@@ -156,7 +156,6 @@ export default {
            localStorage.setItem('description', description);
            this.asyncSetSelected;
       }
-        // this.asyncFiltered(user);
     }
 }
 </script>

@@ -33,26 +33,17 @@
             </div>
         </article>
         <main class="grid__items">
-            <router-link to="about">
-                <Card :img="getData[0].goods[0].url"
-                :name="getData[0].goods[0].name"
-                :price="getData[0].goods[0].price"/>
+            <div class="wrapper__card"
+            v-for="item in this.getData[0].goods" 
+            :key="item.name">
+                <router-link to="about">
+                <Card
+                :img="item.url"
+                :name="item.name"
+                :price="item.price"
+                />
             </router-link>
-            <router-link to="about">
-                <Card :img="getData[0].goods[1].url"
-                :name="getData[0].goods[1].name"
-                :price="getData[0].goods[1].price"/>
-            </router-link>
-            <router-link to="about">
-                <Card :img="getData[0].goods[2].url"
-                :name="getData[0].goods[2].name"
-                :price="getData[0].goods[2].price"/>
-            </router-link>
-            <router-link to="about">
-                <Card :img="getData[0].goods[3].url"
-                :name="getData[0].goods[3].name"
-                :price="getData[0].goods[3].price"/>
-            </router-link>
+            </div>
         </main>
     </div>
 </template>
@@ -72,11 +63,22 @@ export default {
             getData() {
                 return this.data;
             }
+    },
+    methods: {
+        saveData(name, img, price, country, description) {
+        localStorage.setItem("name", name);
+        localStorage.setItem("img", img);
+        localStorage.setItem("price", price);
+        localStorage.setItem("country", country);
+        localStorage.setItem("description", description);
+        this.asyncSetSelected;
+        }
     }
 }
 </script>
 
 <style scoped>
+
 .header__wrapper {
     max-width: 1920px;
     width: 100%;
@@ -188,8 +190,11 @@ export default {
 .grid__items {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
+}
+
+.wrapper__card {
+  margin: 30px;
 }
 
 @media screen and (max-width: 900px) {
