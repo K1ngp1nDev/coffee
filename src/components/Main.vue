@@ -1,8 +1,9 @@
 <template>
   <div>
     <div class="header__wrapper">
-      <swiper class="swiper" :options="swiperOption">
-        <swiper-slide><main class="main__content">
+      <!-- <swiper class="swiper" :options="swiperOption">
+        <swiper-slide> -->
+          <main class="main__content">
         <h1>Everything You Love About Coffee</h1>
         <p><img
             src="../images/Beans_logo_white.jpg"
@@ -12,7 +13,8 @@
           Want to try our beans?
         </h2>
         <router-link to="coffee" class="btn__more">More</router-link>
-      </main></swiper-slide>
+      </main>
+      <!-- </swiper-slide>
         <swiper-slide>Slide 2</swiper-slide>
         <swiper-slide>Slide 3</swiper-slide>
         <swiper-slide>Slide 4</swiper-slide>
@@ -20,7 +22,7 @@
         <div class="swiper-pagination" slot="pagination"></div>
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>
-      </swiper>
+      </swiper> -->
       
     </div>
     <article class="wrapper__about-us">
