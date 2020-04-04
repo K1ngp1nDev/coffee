@@ -57,11 +57,7 @@
                 <label for="button__columbia" class="btn__filter"  >
                     <input type="button" id="button__columbia" class="btn__hidden" @click="filter('columbia')">
                 </label>
-                <!-- {{input}} -->
-                <!-- <button>Kenya</button>
-                <button>Columbia</button> -->
             </div>
-            
         </main>
         <section class="filtered__section" v-if="this.filtered.length == 0 && this.input == ''">
             <aside class="filtered__item" v-for="item in this.getData[0].coffee" :key="item.name"
@@ -79,10 +75,8 @@
                 </router-link>
             </aside>
         </section>
-        <section class="filtered__section" 
-        v-else-if="this.filtered.length > 0"
-        v-for="item in this.getFiltered" :key="item.name">
-            <aside class="filtered__item"
+        <section class="filtered__section" v-else-if="this.filtered.length > 0">
+            <aside class="filtered__item" v-for="item in this.getFiltered" :key="item.name"
             @click="saveData(`${item.name}`, 
                             `${item.url}`,
                             `${item.price}`,
@@ -99,7 +93,6 @@
         </section>
         <h2 v-else>Ничего не найдено</h2>
     </div>
-
   </div>
 </template>
 
@@ -149,13 +142,13 @@ export default {
             this.asyncFiltered(result);
         },
         saveData(name, img, price, country, description) {
-           localStorage.setItem('name', name);
-           localStorage.setItem('img', img);
-           localStorage.setItem('price', price);
-           localStorage.setItem('country', country);
-           localStorage.setItem('description', description);
-           this.asyncSetSelected;
-      }
+            localStorage.setItem('name', name);
+            localStorage.setItem('img', img);
+            localStorage.setItem('price', price);
+            localStorage.setItem('country', country);
+            localStorage.setItem('description', description);
+            this.asyncSetSelected;
+        }
     }
 }
 </script>
@@ -169,6 +162,7 @@ export default {
     flex-wrap: wrap;
     margin: 30px;
 }
+
 .header__wrapper {
     max-width: 1920px;
     width: 100%;
@@ -268,6 +262,7 @@ export default {
     border-radius: 4px 0px 0px 4px; 
     cursor: pointer;
 }
+
 @media screen and (max-width: 900px) {
     .wrapper__about-our-beans {
         flex-direction: column;
@@ -279,12 +274,4 @@ export default {
     }
     
 }
-
-/* 
-.filter-block > button:first-of-type:after {
-    width: 75px;
-    height: 30px;
-    border: 0;
-} */
-
 </style>
