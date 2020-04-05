@@ -13,29 +13,20 @@
       </main>
     </div>
     <article class="wrapper__about-us">
-      <h2>About Us</h2>
+      <h2>{{ $t('About Us') }}</h2>
       <p>
         <img src="../images/Beans_logo_black.jpg" alt="separator" />
       </p>
       <aside class="about-us">
         <p>
-          Extremity sweetness difficult behaviour he of. On disposal of as
-          landlord horrible. Afraid at highly months do things on at. Situation
-          recommend objection do intention so questions. As greatly removed
-          calling pleased improve an. Last ask him cold feel met spot shy want.
-          Children me laughing we prospect answered followed. At it went is song
-          that held help face.
+          {{ $t('Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. Afraid at highly months do things on at. Situation recommend objection do intention so questions. As greatly removed calling pleased improve an. Last ask him cold feel met spot shy want. Children me laughing we prospect answered followed. At it went is song that held help face.') }}
         </p>
         <p>
-          Now residence dashwoods she excellent you. Shade being under his bed
-          her, Much read on as draw. Blessing for ignorant exercise any yourself
-          unpacked. Pleasant horrible but confined day end marriage. Eagerness
-          furniture set preserved far recommend. Did even but nor are most gave
-          hope. Secure active living depend son repair day ladies now.
+          {{ $t('Now residence dashwoods she excellent you. Shade being under his bed her, Much read on as draw. Blessing for ignorant exercise any yourself unpacked. Pleasant horrible but confined day end marriage. Eagerness furniture set preserved far recommend. Did even but nor are most gave hope. Secure active living depend son repair day ladies now.') }}
         </p>
       </aside>
     </article>
-    <h2 class="our-best__heading">Our best</h2>
+    <h2 class="our-best__heading">{{ $t('Our best') }}</h2>
     <article class="wrapper__our-best">
       <div class="wrapper__our-best__list"
       v-for="item in this.getData[0].bestsellers" 

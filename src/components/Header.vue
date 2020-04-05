@@ -12,24 +12,23 @@
                 </label>
                 <ul class="header__navigation__list">
                     <li class="header__navigation__item">
-                        <router-link to="/" class="header__navigation__link">Coffee house</router-link>
+                        <router-link to="/" class="header__navigation__link">{{ $t('Coffee house')}}</router-link>
                     </li>
                     <li class="header__navigation__item">
-                        <router-link to="/coffee" class="header__navigation__link">Our coffee</router-link>
+                        <router-link to="/coffee" class="header__navigation__link">{{ $t('Our coffee')}}</router-link>
                     </li>
                     <li class="header__navigation__item">
-                        <router-link to="/pleasure" class="header__navigation__link">For your pleasure</router-link>
+                        <router-link to="/pleasure" class="header__navigation__link">{{ $t('For your pleasure')}}</router-link>
                     </li>
                     <li class="header__navigation__item">
-                        <router-link to="/video" class="header__navigation__link">Video</router-link>
+                        <router-link to="/video" class="header__navigation__link">{{ $t('Video')}}</router-link>
                     </li>
                     <li class="header__navigation__item">
-                        <router-link to="/gallery" class="header__navigation__link">Gallery</router-link>
+                        <router-link to="/gallery" class="header__navigation__link">{{ $t('Gallery')}}</router-link>
                     </li>
-                    
                 </ul>
-                        <a href="#" class="eng" @click="setLocale('en')"><flag iso="us"></flag></a>
-                        <a href="#" class="rus" @click="setLocale('ru')"><flag iso="ru"></flag></a>
+                <!-- <a href="#" class="eng" @click="setLocale('en')"><flag iso="us"></flag></a>
+                <a href="#" class="rus" @click="setLocale('ru')"><flag iso="ru"></flag></a> -->
             </nav>
             </header>
         </div>
@@ -42,21 +41,23 @@
             <nav class="footer__navigation">
                 <ul class="footer__navigation__list">
                     <li class="footer__navigation__item">
-                        <router-link to="/" class="footer__navigation__link">Coffee house</router-link>
+                        <router-link to="/" class="footer__navigation__link">{{ $t('Coffee house')}}</router-link>
                     </li>
                     <li class="footer__navigation__item">
-                        <router-link to="/coffee" class="footer__navigation__link">Our coffee</router-link>
+                        <router-link to="/coffee" class="footer__navigation__link">{{ $t('Our coffee')}}</router-link>
                     </li>
                     <li class="footer__navigation__item">
-                        <router-link to="/pleasure" class="footer__navigation__link">For your pleasure</router-link>
+                        <router-link to="/pleasure" class="footer__navigation__link">{{ $t('For your pleasure')}}</router-link>
                     </li>
                     <li class="footer__navigation__item">
-                        <router-link to="/video" class="footer__navigation__link">Video</router-link>
+                        <router-link to="/video" class="footer__navigation__link">{{ $t('Video')}}</router-link>
                     </li>
                     <li class="footer__navigation__item">
-                        <router-link to="/gallery" class="footer__navigation__link">Gallery</router-link>
+                        <router-link to="/gallery" class="footer__navigation__link">{{ $t('Gallery')}}</router-link>
                     </li>
                 </ul>
+                <!-- <a href="#" class="eng" @click="setLocale('en')"><flag iso="us"></flag></a>
+                <a href="#" class="rus" @click="setLocale('ru')"><flag iso="ru"></flag></a> -->
             </nav>
             </footer>
             <p class="footer__separator">

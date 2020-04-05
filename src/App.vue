@@ -6,7 +6,7 @@
 
 <style>
 #app {
-  font-family: 'Merienda', cursive;
+  font-family: 'Merienda', cursive, sans-serif;
   padding: 0;
   margin: 0;
 }
