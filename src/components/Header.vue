@@ -26,7 +26,10 @@
                     <li class="header__navigation__item">
                         <router-link to="/gallery" class="header__navigation__link">Gallery</router-link>
                     </li>
+                    
                 </ul>
+                        <a href="#" class="eng" @click="setLocale('en')"><flag iso="us"></flag></a>
+                        <a href="#" class="rus" @click="setLocale('ru')"><flag iso="ru"></flag></a>
             </nav>
             </header>
         </div>
@@ -81,9 +84,17 @@ export default {
         Video,
         About,
         Gallery
+    }, 
+    methods: {
+        setLocale(locale) {
+            this.$i18n.locale = locale;
+            console.log(locale, 'locale');
+        }
     }
 }
 </script>
+
+
 
 <style scoped>
 .home {
