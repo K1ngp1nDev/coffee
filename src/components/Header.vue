@@ -27,8 +27,8 @@
                         <router-link to="/gallery" class="header__navigation__link">{{ $t('Gallery')}}</router-link>
                     </li>
                 </ul>
-                <!-- <a href="#" class="eng" @click="setLocale('en')"><flag iso="us"></flag></a>
-                <a href="#" class="rus" @click="setLocale('ru')"><flag iso="ru"></flag></a> -->
+                <a href="#" class="eng" @click="setLocale('en')"><flag iso="us"></flag></a>
+                <a href="#" class="rus" @click="setLocale('ru')"><flag iso="ru"></flag></a>
             </nav>
             </header>
         </div>
@@ -56,8 +56,8 @@
                         <router-link to="/gallery" class="footer__navigation__link">{{ $t('Gallery')}}</router-link>
                     </li>
                 </ul>
-                <!-- <a href="#" class="eng" @click="setLocale('en')"><flag iso="us"></flag></a>
-                <a href="#" class="rus" @click="setLocale('ru')"><flag iso="ru"></flag></a> -->
+                <a href="#" class="eng" @click="setLocale('en')"><flag iso="us"></flag></a>
+                <a href="#" class="rus" @click="setLocale('ru')"><flag iso="ru"></flag></a>
             </nav>
             </footer>
             <p class="footer__separator">
