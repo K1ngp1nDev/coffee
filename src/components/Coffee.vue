@@ -3,27 +3,20 @@
     <div class="header__wrapper">
         <div class="heading__content">
             <h1>
-                Our Coffee
+                {{$t('Our Coffee')}}
             </h1>
         </div>
     </div>
     <article class="wrapper__about-our-beans">
         <img src="../images/girldAndCup.png" alt="presentation" class="presentation__girl-with-cup">
         <div>
-            <h2>About our beans</h2>
+            <h2>{{$t('About our beans')}}</h2>
             <p>
                 <img src="../images/Beans_logo_black.jpg" alt="separator" />
             </p>
             <aside class="about-our-beans">
                 <p>
-                    Extremity sweetness difficult behaviour he of. 
-                    On disposal of as landlord horrible. 
-                    Afraid at highly months do things on at. 
-                    Situation recommend objection do intention so questions. 
-                    As greatly removed calling pleased improve an. 
-                    Last ask him cold feel met spot shy want. 
-                    Children me laughing we prospect answered followed. 
-                    At it went is song that held help face.
+                    {{$t('Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. Afraid at highly months do things on at. Situation recommend objection do intention so questions. As greatly removed calling pleased improve an. Last ask him cold feel met spot shy want. Children me laughing we prospect answered followed. At it went is song that held help face.')}}
                 </p>
             </aside>
             <p>
@@ -37,17 +30,17 @@
         <main class="main__block">
             <div class="search-block">
                 <label for="search__input">
-                    Looking for
+                    {{$t('Looking for')}}
                     <input type="text" 
                     class="search__input" 
                     id="search__input" 
-                    placeholder="start typing here..." 
+                    :placeholder="$t('start typing here...')"
                     v-model="input"
                     v-on:input="search()">
                 </label>
             </div>
             <div class="filter-block">
-                <span>Or filter</span>
+                <span>{{$t('Or filter')}}</span>
                 <label for="button__brazil" class="btn__filter" >
                     <input type="button" id="button__brazil" class="btn__hidden" @click="filter('brazil')">
                 </label>

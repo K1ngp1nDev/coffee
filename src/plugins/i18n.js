@@ -18,12 +18,22 @@ const messages = {
     'Лучшее' : 'Our best',
     'Дом кофе' : 'Coffee house',
     'Наше кофе' : 'Our coffee',
+    'Наше кофе' : 'Our Coffee',
     'Для вашего удовольствия' : 'For your pleasure',
     'Видео' : 'Video',
     'Галерея' : 'Gallery',
     'Солимо Кофе Бэнс 2 кг' : 'Solimo Coffee Beans 2 kg',
     'Престо Кофе Бэнс 1кг' : 'Presto Coffee Beans 1 kg',
-    'АРОМИСТИКО Кофе 1кг' : 'AROMISTICO Coffee 1 kg'
+    'АРОМИСТИКО Кофе 1кг' : 'AROMISTICO Coffee 1 kg',
+    'О наших зернах' : 'About our beans',
+    'Конечность сладости затруднена. В распоряжении хозяина ужасно. Боюсь, что в течение нескольких месяцев делать вещи на в. Ситуация рекомендую возражение сделать так, вопросы. Как удалено призвание приятно улучшить. Последнее, спросите его, холодно чувствую, встретил место, стесняется хотеть. Дети мне смеялись, мы с перспективой ответили. На это пошла песня, которая держала лицо помощи.'
+    : 'Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. Afraid at highly months do things on at. Situation recommend objection do intention so questions. As greatly removed calling pleased improve an. Last ask him cold feel met spot shy want. Children me laughing we prospect answered followed. At it went is song that held help face.',
+    'Ищу' : 'Looking for',
+    'печатать тут...': 'start typing here...', 
+    'Или фильтр' : 'Or filter',
+    'Бразилия' : 'Brazil',
+    'Кения' : 'Kenya',
+    'Columbia' : 'Колумбия'
   },
   'ru' : {
     'Everything You Love About Coffee' 
@@ -39,12 +49,23 @@ const messages = {
     'Our best' : 'Лучшее',
     'Coffee house' : 'Дом кофе',
     'Our coffee' : 'Наше кофе',
+    'Our Coffee' : 'Наше кофе',
     'For your pleasure' : 'Для вашего удовольствия',
     'Video' : 'Видео',
     'Gallery' : 'Галерея',
     'Solimo Coffee Beans 2 kg': 'Солимо Кофе Бэнс 2 кг',
     'Presto Coffee Beans 1 kg' : 'Престо Кофе Бэнс 1кг',
-    'AROMISTICO Coffee 1 kg' : 'АРОМИСТИКО Кофе 1кг'
+    'AROMISTICO Coffee 1 kg' : 'АРОМИСТИКО Кофе 1кг',
+    'About our beans' : 'О наших зернах',
+    'Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. Afraid at highly months do things on at. Situation recommend objection do intention so questions. As greatly removed calling pleased improve an. Last ask him cold feel met spot shy want. Children me laughing we prospect answered followed. At it went is song that held help face.'
+    : 'Конечность сладости затруднена. В распоряжении хозяина ужасно. Боюсь, что в течение нескольких месяцев делать вещи на в. Ситуация рекомендую возражение сделать так, вопросы. Как удалено призвание приятно улучшить. Последнее, спросите его, холодно чувствую, встретил место, стесняется хотеть. Дети мне смеялись, мы с перспективой ответили. На это пошла песня, которая держала лицо помощи.',
+    'Looking for' : 'Ищу',
+    'start typing here...' : 'печатать тут...',
+    'Or filter' : 'Или фильтр',
+    'Brazil' : 'Бразилия',
+    'Kenya' : 'Кения',
+    'Columbia' : 'Колумбия'
+
   }
 }
 
