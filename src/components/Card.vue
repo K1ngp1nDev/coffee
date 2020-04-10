@@ -9,13 +9,13 @@
                     class="card__img">
                 </span>
                 <span class="best__item__name">
-                    {{this.name}}
+                    {{$t(this.name)}}
                 </span>
                 <span v-if="this.country" class="best__item__country">
-                    {{this.country}}
+                    {{$t(this.country)}}
                 </span>
                 <span class="best__item__price">
-                    {{this.price}}
+                    {{$t(this.price)}}
                 </span>
             </aside>
         </article>

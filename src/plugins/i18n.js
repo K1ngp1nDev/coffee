@@ -20,7 +20,10 @@ const messages = {
     'Наше кофе' : 'Our coffee',
     'Для вашего удовольствия' : 'For your pleasure',
     'Видео' : 'Video',
-    'Галерея' : 'Gallery'
+    'Галерея' : 'Gallery',
+    'Солимо Кофе Бэнс 2 кг' : 'Solimo Coffee Beans 2 kg',
+    'Престо Кофе Бэнс 1кг' : 'Presto Coffee Beans 1 kg',
+    'АРОМИСТИКО Кофе 1кг' : 'AROMISTICO Coffee 1 kg'
   },
   'ru' : {
     'Everything You Love About Coffee' 
@@ -38,7 +41,10 @@ const messages = {
     'Our coffee' : 'Наше кофе',
     'For your pleasure' : 'Для вашего удовольствия',
     'Video' : 'Видео',
-    'Gallery' : 'Галерея'
+    'Gallery' : 'Галерея',
+    'Solimo Coffee Beans 2 kg': 'Солимо Кофе Бэнс 2 кг',
+    'Presto Coffee Beans 1 kg' : 'Престо Кофе Бэнс 1кг',
+    'AROMISTICO Coffee 1 kg' : 'АРОМИСТИКО Кофе 1кг'
   }
 }
 
